@@ -1,4 +1,120 @@
-h1 {
-  color: red;
+body {
+  background: #eeeeee;
+}
+
+.work-main-header {
+  color: #3e2723;
   font-family: "Itim", cursive;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: fill;
+}
+
+.work {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 330px;
+}
+
+.work-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: "Merriweather", serif;
+}
+
+.container .work:hover .work-info .content {
+  transform: translateX(0px);
+}
+
+.content {
+  position: relative;
+  padding: 30px;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateX(-100%);
+  transition-delay: 200ms;
+  color: black;
+}
+
+.content h4 {
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.content p {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.work-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.work-links a {
+  color: black;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.work-links a:hover {
+  color: brown;
+}
+
+.work .work-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+
+.work:hover .work-info::before {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  transition-delay: 0s;
+}
+
+@media (max-width: 800px) {
+  .work-main-header {
+    font-size: 30px;
+  }
+
+  .work-section-header {
+    font-size: 15px;
+  }
+
+  .work {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .work-info {
+    padding-bottom: 0;
+  }
+
+  .content {
+    padding-bottom: 0;
+  }
 }
