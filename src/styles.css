@@ -1,6 +1,7 @@
 :root {
   --background-color: #eeeeee;
   --title-color: #3e2723;
+  --shadow-color: #bdbdbd;
   --title-font: "Itim", cursive;
   --paragraph-font: "Merriweather", serif;
 }
@@ -100,6 +101,11 @@ body {
   transition: transform 0.5s ease-in-out;
   transform-origin: left;
   transition-delay: 0s;
+}
+
+.item img {
+  border-radius: 5px;
+  box-shadow: 5px 10px 5px var(--shadow-color);
 }
 
 @media (max-width: 800px) {
