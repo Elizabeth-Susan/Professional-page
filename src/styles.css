@@ -72,13 +72,18 @@ body {
   justify-content: space-evenly;
 }
 
-.work-links a {
+.work-links a,
+.picture-page a {
   color: #000000;
-  margin-bottom: 10px;
   text-decoration: none;
 }
 
-.work-links a:hover {
+.work-links a {
+  margin-bottom: 10px;
+}
+
+.work-links a:hover,
+.picture-page a:hover {
   opacity: 0.5;
 }
 
